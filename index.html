@@ -1,252 +1,278 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
-<html>
-<head>
-	<link rel="stylesheet" type="text/css" href="../megamenu.css">
-	<style type="text/css">
-*, *:before, *:after {
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dropdown mega menu</title>
+    <link rel="stylesheet" type="text/css" href="../megamenu.css">
+    <style media="screen">
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-body {
-  background: linear-gradient(to right, #ea1d6f 0%, #eb466b 100%);
-  /*font-size: 12px;*/
-}
-
-body, button, input {
+  list-style: none;
   font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  letter-spacing: 1.4px;
 }
-
-.background {
-  display: flex;
-  min-height: 95vh;
-}
-
-.container {
-  flex: 0 1 700px;
-  margin: auto;
-  padding: 10px;
-}
-
-.screen {
-  position: relative;
-  background: #3e3e3e;
-  border-radius: 15px;
-}
-
-.screen:after {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 20px;
-  right: 20px;
-  bottom: 0;
-  border-radius: 15px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
-  z-index: -1;
-}
-
-.screen-header {
-  display: flex;
-  align-items: center;
-  padding: 10px 20px;
-  background: #4d4d4f;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-}
-
-.screen-header-left {
-  margin-right: auto;
-}
-
-.screen-header-button {
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  margin-right: 3px;
-  border-radius: 8px;
-  background: white;
-}
-
-.screen-header-button.close {
-  background: #ed1c6f;
-}
-
-.screen-header-button.maximize {
-  background: #e8e925;
-}
-
-.screen-header-button.minimize {
-  background: #74c54f;
-}
-
-.screen-header-right {
-  display: flex;
-}
-
-.screen-header-ellipsis {
-  width: 3px;
-  height: 3px;
-  margin-left: 2px;
-  border-radius: 8px;
-  background: #999;
-}
-
-.screen-body {
-  display: flex;
-  
-}
-
-.screen-body-item {
-  flex: 1;
-  padding: 50px;
-}
-
-.screen-body-item.left {
-  display: flex;
-  flex-direction: column;
-}
-
-.app-title {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  color: #ea1d6f;
-  font-size: 26px;
-}
-
-.app-title:after {
-  content: '';
-  display: block;
-  position: absolute;
-  left: 0;
-  bottom: -10px;
-  width: 25px;
-  height: 4px;
-  background: #ea1d6f;
-}
-
-.app-contact {
-  margin-top: auto;
-  font-size: 11px;
-  color: #888;
-}
-
-.app-form-group {
-  margin-bottom: 15px;
-}
-
-.app-form-group.message {
-  margin-top: 40px;
-}
-
-.app-form-group.buttons {
-  margin-bottom: 0;
-  text-align: right;
-}
-
-.app-form-control {
+body{
+ /* background-color: #000
+  border-color:#000;
+  color: #000*/
+    background: linear-gradient(
+     105deg,
+     #88beee ,
+     #0a2e73
+ );
+  height: 100vh;
   width: 100%;
-  padding: 10px 0;
-  background: none;
-  border: none;
-  border-bottom: 1px solid #666;
-  color: #ddd;
-  font-size: 14px;
-  text-transform: uppercase;
-  outline: none;
-  transition: border-color .2s;
 }
-
-.app-form-control::placeholder {
-  color: #666;
+.background{
+  /*background: linear-gradient(#e66465, #9198e5);*/s
 }
-
-.app-form-control:focus {
-  border-bottom-color: #ddd;
-}
-
-.app-form-button {
-  background: none;
-  border: none;
-  color: #ea1d6f;
-  font-size: 14px;
-  cursor: pointer;
-  outline: none;
-}
-
-.app-form-button:hover {
-  color: #b9134f;
-}
-
-.credits {
+.wrapper{
+  min-height: 95vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
-  color: #ffa4bd;
-  font-family: 'Roboto Condensed', sans-serif;
-  font-size: 16px;
-  font-weight: normal;
+ /* height: 600px;*/
+ padding: top:10px;
+
 }
 
-.credits-link {
+.registration_form{
+  background: white;
+  padding: 25px;
+  border-radius: 5px;
+  width: 400px;
+  border: 1.3px solid #9597a6;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.registration_form .title{
+  text-align: center;
+  font-size: 25px;
+  text-transform: uppercase;
+  color: white;
+  background:rgb(13, 98, 215);
+  letter-spacing: 2px;
+  font-weight: 700;
+  margin-top: -25px;
+  margin-left:-25px;
+  margin-right:-25px;
+}
+
+.form_wrap{
+  margin-top: 35px;
+}
+
+.form_wrap .input_wrap{
+  margin-bottom: 15px;
+}
+
+.form_wrap .input_wrap:last-child{
+  margin-bottom: 0;
+}
+
+.form_wrap .input_wrap label{
+  display: block;
+  margin-bottom: 3px;
+  color: #1a1a1f;
+}
+
+.form_wrap .input_grp{
   display: flex;
-  align-items: center;
-  color: #fff;
-  font-weight: bold;
-  text-decoration: none;
+  justify-content: space-between;
 }
 
-.dribbble {
-  width: 20px;
+.form_wrap .input_grp  input[type="text"]{
+  width: 165px;
+}
+
+.form_wrap  input[type="text"]{
+  width: 100%;
+  border-radius: 3px;
+  border: 1.3px solid #9597a6;
+  padding: 10px;
+  outline: none;
+}
+
+
+
+.form_wrap .submit_btn{
+  width: 100%;
+  background: #0d6ad7;
+  padding: 15px;
+  border: 0;
+  color:white;
+  font-size:17px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.form_wrap .submit_btn:hover{
+  background: #051c94;
+}
+.fallbackDatePicker{
+ display: flex;
+ justify-content: space-between;
+ margin-top: 10px;
+}
+.label{
+  display: block;
+  font:1rem 'Fira Sans', sans-serif;
+}
+input, label{
+  margin: 0.4rem 0;
+}
+.city{
+  width: 100%;
+  border-radius: 3px;
+  border: 1.3px solid #9597a6;
+  padding: 10px;
+  outline: none;
+}
+input::-webkit-inner-spin-button{
+  -webkit-appearance: none;
+  margin: 0;
+}
+.start{
+  width: 100%;
+}
+.trip-start{
+  width: 100px;
   height: 20px;
-  margin: 0 5px;
 }
-
-@media screen and (max-width: 520px) {
-  .screen-body {
-    flex-direction: column;
-  }
-
-  .screen-body-item.left {
-    margin-bottom: 30px;
-  }
-
-  .app-title {
-    flex-direction: row;
-  }
-
-  .app-title span {
-    margin-right: 12px;
-  }
-
-  .app-title:after {
-    display: none;
-  }
+.menubar {
+    /*background:#FF4500;*/
+    display: flex;
+    justify-content: center;
 }
+.alignment {
+    width: 80%;
+}
+.main_menu_area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu{
+        display: flex;
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;  
+        text-transform: uppercase;
+}
+      .menu li {
+        list-style: none;  
+      }
+      .menu li a {
+        padding: 1em;  
+        display: block;
+        color: black;
+        text-decoration: none;  
+        position: relative;
+        color: #FFFFFF
+      }
+      .menu li a:hover {
+        /*color: #f1f1f1;*/
+        /*background:0;*/
+        /*border-radius: 200px;*/
+      }
+      .mega-menu {
+        display: flex;    
+        justify-content: space-between;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        background: #eee; 
+        opacity: 0;  
+        visibility: hidden;
+        background-color: #F8F2ED;  
+      }
+      .menu li:hover > .mega-menu {
+        opacity: 1;
+        overflow: visible;
+        visibility: visible;
+      }
 
-@media screen and (max-width: 600px) {
-  .screen-body {
-    padding: 40px;
-  }
+      .mega-menu .sub {
+        padding: 1em;
+      }
+      .mega-menu .sub ul {
+        margin: 0;
+        padding: 0;
 
-  .screen-body-item {
+      }
+      .mega-menu .sub li {
+      margin-bottom: 0.75em;
+
+      }
+      .mega-menu .sub h4 {
+        text-transform: uppercase; 
+        margin: 0 0 1em 0;
+      }
+      .mega-menu .sub a {
+        padding: 0;
+        color: #000;
+      }
+      .mega-menu .sub img {
+        display: block;
+      }
+      .mega-menu .sub p {
+        margin-bottom: 0;
+      }
+      .mega-menu .sub strong {
+        text-transform: uppercase; 
+      }
+      .nav li a::after{
+        content: '';
+        height: 3px;
+        width: 0;
+        background: #00FFFF;
+        position: absolute;
+        left: -1px;
+        bottom: 4px;
+        transition: 0.5s;
+      }
+      .nav li a:hover::after{
+        width: 100%;
+      }
+      sub li a{
+        background: #000;
+      }
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+* {
+    margin: 0;
     padding: 0;
-  }
+    box-sizing: border-box;
+    font-family:'Montserrat', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+   font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  letter-spacing: 1.4px;
 }
-
-	</style>
-	<title>Contact</title>
-</head>
-<body>
-	     <header>
-     	<!-- <div class="banner"> -->
+ul {
+    list-style: none;
+}
+a {
+    color:#FFFFFF;
+    text-decoration: none;
+}
+.logo{
+  color: #FFFFFF
+}
+.sub li a:hover::after{
+        width:0;
+      }
+  </style>
+  </head>
+  <body>
+    <div class="background"></div>
+     <header>
         <div class="menubar">
         <div class="alignment">
             <div class="main_menu_area">
@@ -306,69 +332,65 @@ body, button, input {
         <li><a href="C:\Users\i\Desktop\uy\class6.2\Web site/2/index.html">Registration</a></li>
       </ul>
     </nav>
-</div>
+  </div>
 <hr>
 </header>
-<div class="background">
-  <div class="container">
-    <div class="screen">
-      <div class="screen-header">
-        <div class="screen-header-left">
-          <div class="screen-header-button close"></div>
-          <div class="screen-header-button maximize"></div>
-          <div class="screen-header-button minimize"></div>
-        </div>
-        <div class="screen-header-right">
-          <div class="screen-header-ellipsis"></div>
-          <div class="screen-header-ellipsis"></div>
-          <div class="screen-header-ellipsis"></div>
-        </div>
+<div class="wrapper">
+    <div class="registration_form">
+      <div class="title">
+        Registration Form
       </div>
-      <div class="screen-body">
-        <div class="screen-body-item left">
-          <div class="app-title">
-            <span>CONTACT</span>
-            <span>US</span>
-          </div>
-          <div class="app-contact">CONTACT INFO : +880 0100 000 000</div>
-        </div>
-        <div class="screen-body-item">
-          <div class="app-form">
-            <div class="app-form-group">
-              <input class="app-form-control" placeholder="NAME">
+      <form>
+        <div class="form_wrap">
+          <div class="input_grp">
+            <div class="input_wrap">
+              <label for="fname">First Name</label>
+              <input type="text" id="fname">
             </div>
-            <div class="app-form-group">
-              <input class="app-form-control" placeholder="EMAIL">
-            </div>
-            <div class="app-form-group">
-              <input class="app-form-control" placeholder="CONTACT NO">
-            </div>
-            <div class="app-form-group message">
-              <input class="app-form-control" placeholder="MESSAGE">
-            </div>
-            <div class="app-form-group buttons">
-              <button class="app-form-button">CANCEL</button>
-              <button class="app-form-button">SEND</button>
+            <div class="input_wrap">
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname">
             </div>
           </div>
+          <div class="input_wrap">
+            <label for="email">Email Address</label>
+            <input type="text" id="email">
+          </div>
+
+          <div class="input_wrap">
+            <label for="city">Phone Number</label>
+            <input type="Number" id="city" class="city" min="0">
+          </div>
+          <div class="input_wrap">
+            <label for="country">Address</label>
+            <input type="text" id="country">
+          </div>
+
+          <div class="input_wrap">
+            <label>Gender</label>
+            <ul>
+              <li>
+                <label class="radio_wrap">
+                  <input type="radio" name="gender" value="male" class="input_radio">
+                  <span>Male</span>
+                </label>
+              </li>
+              <li>
+                <label class="radio_wrap">
+                  <input type="radio" name="gender" value="female" class="input_radio">
+                  <span>Female</span>
+                </label>
+              </li>
+            </ul>
+          </div>         
+          <label for="start">Date of Birth</label>
+          <input type="date" name="trip-start" id="start" class="trip-start" value="2023-12-09" min="1940-01-01" max="2023-12-09" />
+          <div class="input_wrap">
+            <input type="submit" value="Register Now" class="submit_btn">
+          </div>
         </div>
-      </div>
-    </div>
-    <div class="credits">
-      Created by
-      <a class="credits-link" href="https://dribbble.com/shots/2666271-Contact" target="_blank">
-        <svg class="dribbble" viewBox="0 0 200 200">
-          <g stroke="#ffffff" fill="none">
-            <circle cx="100" cy="100" r="90" stroke-width="20"></circle>
-            <path d="M62.737004,13.7923523 C105.08055,51.0454853 135.018754,126.906957 141.768278,182.963345" stroke-width="20"></path>
-            <path d="M10.3787186,87.7261455 C41.7092324,90.9577894 125.850356,86.5317271 163.474536,38.7920951" stroke-width="20"></path>
-            <path d="M41.3611549,163.928627 C62.9207607,117.659048 137.020642,86.7137169 189.041451,107.858103" stroke-width="20"></path>
-          </g>
-        </svg>
-        ARIFIN
-      </a>
+      </form>
     </div>
   </div>
-</div>
 </body>
-</html>
+</html>   
